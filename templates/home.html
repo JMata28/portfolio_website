@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="top-section">
+    <h1 class="space-grotesk-title">
+        Hello. My name is José Mata and I am a 
+        <div id="highlighted-text">software engineer.</div>
+    </h1>
+    <div class="text-center">
+    <button type="button" class="btn btn-outline-light btn-lg space-grotesk-title">View my work</button>
+    <button type="button" class="btn btn-outline-light btn-lg space-grotesk-title">Download Resume</button>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">      
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Resume</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Skills</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Projects
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">This Portfolio Website</a></li>
+                <li><a class="dropdown-item" href="#">DishData</a></li>
+                <li><a class="dropdown-item" href="#">Golang Machine Learning Face Detection Program</a></li>
+                <li><a class="dropdown-item" href="#">Plant Growth Station</a></li>
+            </ul>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+{% endblock content %}
