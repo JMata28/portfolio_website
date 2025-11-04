@@ -62,7 +62,7 @@ html{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.6);
     backdrop-filter: blur(8px);
     z-index: 0;          /* BELOW modal */
 }
@@ -87,6 +87,10 @@ html{
   padding-bottom: 0vh;       /* remove extra padding */
 }
 
+.btn.space-grotesk-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 
 /* TECH STACK SECTION CLASSES */ 
 .icon-rect {
