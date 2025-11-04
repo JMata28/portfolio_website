@@ -17,6 +17,9 @@ body, html {
     scroll-behavior: smooth;
 }
 
+html{
+  scroll-padding-top: 20vh; /* centers target section vertically */
+}
 
 .big-title{
     font-size: 3rem;
@@ -114,7 +117,7 @@ body, html {
 /* NAVBAR CLASSES*/
 
 .navbar-transparent {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px); /* optional: adds nice blur effect behind the navbar */
 }
 /* Navbar buttons: rectangular with slightly rounded corners */
