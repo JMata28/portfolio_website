@@ -15,18 +15,32 @@
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!-- Modal for page in construction -->
+        <div class="modal fade" id="constructionModal" tabindex="-1" aria-labelledby="constructionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content bg-black text-white text-center border border-white">
+            <div class="modal-body d-flex justify-content-center align-items-center">
+                <h1>This page is currently under construction. Check back soon for updates!</h1>
+            </div>
+            <div class="modal-footer justify-content-center border-0">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
         <!--Modals that display Demo Videos-->
-        <div class="modal fade" id="PGSDemoModal" tabindex="-1" aria-labelledby="PGSDemoModalLabel" aria-hidden="true">
+        <!--PGS Web App DEMO Video-->
+        <div class="modal fade" id="PGSWebAppDEMOModal" tabindex="-1" aria-labelledby="PGSWebAppDEMOModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="PGSDemoModalLabel">Plant Growth Station Demo</h5>
+                <h5 class="modal-title" id="PGSWebAppDEMOModalLabel">Plant Growth Station - Web App DEMO Video</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex justify-content-center">
                 <!-- Video inside modal -->
                 <video controls autoplay style="max-width: 100%; height: auto;">
-                <source src="{{ url_for('static', filename='/media/videos/PGS Demo.mp4') }}" type="video/mp4">
+                <source src="{{ url_for('static', filename='/media/videos/PGS DEMO/PGS Web App Demo.mp4') }}" type="video/mp4">
                 Your browser does not support HTML5 video.
                 </video>
             </div>
@@ -36,9 +50,52 @@
             </div>
         </div>
         </div>
+        <!--PGS Hardware Device DEMO Video-->
+        <div class="modal fade" id="PGSHardwareDEMOModal" tabindex="-1" aria-labelledby="PGSHardwareDEMOModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="PGSHardwareDEMOModalLabel">Plant Growth Station - Hardware Device Demo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                <!-- Video inside modal -->
+                <video controls autoplay style="max-width: 100%; height: auto;">
+                <source src="{{ url_for('static', filename='/media/videos/PGS DEMO/PGS Device DEMO.mp4') }}" type="video/mp4">
+                Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+            <!--PGS Hardware Email Alerts DEMO Video-->
+        <div class="modal fade" id="PGSEmailDEMOModal" tabindex="-1" aria-labelledby="PGSEmailDEMOModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="PGSEmailDEMOModalLabel">Plant Growth Station - Automated Email Alert System Demo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                <!-- Video inside modal -->
+                <video controls autoplay style="max-width: 100%; height: auto;">
+                <source src="{{ url_for('static', filename='/media/videos/PGS DEMO/PGS Email Alert DEMO.mp4') }}" type="video/mp4">
+                Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!--Background Video-->
         <div class="video-wrapper">
         <video autoplay muted loop id="bg-video">
-            <source src="{{ url_for('static', filename='/media/videos/background 2.mp4') }}" type="video/mp4">
+            <source src="{{ url_for('static', filename='/media/videos/background.mp4') }}" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
         <div id="blur-overlay"></div>
@@ -47,7 +104,7 @@
             {% endblock content %}
         <!--From bootstrap documentation-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        <!-- Sscript to pause video when modal closes -->
+        <!-- Script to pause video when modal closes -->
         <script>
         // Select all modals on the page
         var modals = document.querySelectorAll('.modal');

@@ -56,3 +56,6 @@ pip-delete-this-directory.txt
 # IDE files (e.g., VS Code, PyCharm)
 .vscode/
 .idea/
+
+#Videos folder
+static/media/videos/

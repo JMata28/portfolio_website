@@ -33,7 +33,7 @@
     <div class="top-section">
         <h1 class="space-grotesk-title big-title">
             Hello. My name is José Mata and I am a 
-            <div id="highlighted-text">software engineer.</div>
+            <div class="highlighted-text">software engineer.</div>
         </h1>
         <div class="text-center">
         <button type="button" class="btn btn-outline-light btn-lg space-grotesk-title">
@@ -43,20 +43,25 @@
         </div>
     </div>
     <!-- About section -->
-    <div class="container about-section my-5 text-white py-5" style="background-color: #000;">
+    <div class="container about-section my-5 text-white py-5" style="background-color: rgba(0,0,0,0.6);">
         <div class="row">
             <!-- Left column: About text -->
             <div class="col-md-6 mb-4">
                 <h1 id="aboutSection" class="mb-4 big-title">About</h1>
-                <p>
-                    Diligent software engineer seeking career opportunities in software.
-                    Proficient in Python full-stack development. Bilingual, highly motivated,
-                    proactive, fast self-learner, and committed to going the extra mile.
-                </p>
+                <div class="text-start">
+                    <p>
+                    Diligent software engineer with hands-on experience in both full-time and internship roles, specializing in Python full-stack development. Boston-based and actively seeking software engineering/software developer opportunities, with openness to relocation for the right role.
+                    </p>
+                    <ul>
+                        <li>Creator of multiple full-stack Flask applications.</li>
+                        <li>Currently teaching an advanced Python concepts course, reflecting a deep understanding of the language and ability to mentor others. </li>
+                        <li>Bilingual, highly motivated, proactive, and a fast self-learner. </li>
+                    </ul>
+                </div>
             </div>
             <!-- Right column: Accolades Accordion -->
-            <div class="col-md-6">
-                <div class="accordion" id="aboutAccordion">
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="accordion w-100" id="aboutAccordion">
                     
                     <!-- Current Role -->
                     <div class="accordion-item">
@@ -156,10 +161,10 @@
     </div>
 
     <!-- Icon grid -->
-     <h1 id="techStack" class="big-title"> Tech Stack </h1>
+     <h1 id="techStack" class="big-title"> Tech Stack Summary</h1>
     <div class="container mt-4 mb-4">
         <!-- First Row -->
-        <div class="row text-center mb-3">
+        <div class="row text-center">
             <!-- Python -->
             <div class="col-6 col-md-3 mb-3">
                 <a href="https://www.python.org/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
@@ -209,8 +214,58 @@
                 </a>
             </div>
         </div>
-
         <!-- Second Row -->
+        <div class="row text-center">
+            <!-- AWS++ -->
+            <div class="col-6 col-md-3 mb-3">
+                <a href="https://docs.aws.amazon.com/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
+                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
+                    <div class="icon-img-wrapper">
+                    <img src="{{ url_for('static', filename='/media/pictures/AWS logo.png') }}" 
+                        alt="AWS Logo">
+                    </div>
+                    <div class="mt-2">AWS App Deployment</div>
+                </div>
+                </a>
+            </div>
+            <!-- Docker -->
+            <div class="col-6 col-md-3 mb-3">
+                <a href="https://docs.docker.com/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
+                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
+                    <div class="icon-img-wrapper">
+                    <img src="{{ url_for('static', filename='/media/pictures/docker logo.png') }}" 
+                        alt="Docker Logo">
+                    </div>
+                    <div class="mt-2">Docker</div>
+                </div>
+                </a>
+            </div>
+            <!-- HTML 5-->
+            <div class="col-6 col-md-3 mb-3">
+                <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
+                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
+                    <div class="icon-img-wrapper">
+                    <img src="{{ url_for('static', filename='/media/pictures/HTML5.png') }}" 
+                        alt="HTML5 Logo">
+                    </div>
+                    <div class="mt-2">HTML5</div>
+                </div>
+                </a>
+            </div>
+            <!-- Bootstrap -->
+            <div class="col-6 col-md-3 mb-3">
+                <a href="https://getbootstrap.com/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
+                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
+                    <div class="icon-img-wrapper">
+                    <img src="{{ url_for('static', filename='/media/pictures/Bootstrap logo.png') }}" 
+                        alt="Bootstrap Logo">
+                    </div>
+                    <div class="mt-2">Bootstrap</div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <!-- Third Row -->
         <div class="row text-center">
             <!-- C++ -->
             <div class="col-6 col-md-3 mb-3">
@@ -260,7 +315,7 @@
                 </div>
                 </a>
             </div>
-    </div>
+        </div>
     <!-- End of icon grid container -->
     </div>
 
@@ -268,93 +323,253 @@
     <h1 id="projectsSection" class="big-title"> Projects</h1>
     <div class="container">
         <!-- First Project Card -->
-        <div id="first-project" class="container my-5 d-flex justify-content-center">
+            <!-- Outer container -->
+            <div id="first-project" class="container my-5 d-flex justify-content-center">
             <div class="card w-100 mb-2">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ url_for('static', filename='/media/pictures/html_pic.jpg') }}" class="img-fluid rounded-start" alt="HTML Picture">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">This Portfolio Website!</h5>
-                            <p class="card-text">
-                            josemata.dev was created using the following technologies: Python, Flask, AWS,
-                            </p>
-                            <a class="btn btn-outline-primary" href="#" role="button">GitHub Repo</a>
+                <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
+                
+                <!-- Left side: Image -->
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='/media/pictures/html_pic.jpg') }}" class="img-fluid rounded-start h-100 object-fit-cover" alt="HTML Picture">
+                </div>
+
+                <!-- Right side: Content -->
+                <div class="col-md-8">
+                    <div class="card-body h-100 d-flex flex-column"> <!-- make content fill height -->
+                    <div class="row flex-grow-1 align-items-stretch">
+                        
+                        <!-- Left: Description -->
+                        <div class="col-md-7 border-end">
+                        <h4 class="card-title fw-bold mb-3">This Portfolio Website</h4>
+                        <p class="card-text text-start">
+                            You're looking at it! Josemata.dev is a responsive personal portfolio website showcasing my projects, resume, and contact info.
+                            Built to be simple, fast, and easily expandable.
+                        </p>
+                        <ul class="text-start">
+                            <li>Developed with Python Flask.</li>
+                            <li>Customized with CSS and Bootstrap.</li>
+                            <li>Containerized in Docker and deployed in Amazon Web Services Beanstalk.</li>
+                            <li>Updated periodically to be made more efficient and scalable, as I create more DEMO videos and work on new projects.</li>
+                        </ul>
+                        </div>
+
+                        <!-- Right: Technologies -->
+                        <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <h6 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Python</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Flask</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">AWS</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Docker</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">HTML5</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">CSS</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Bootstrap</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">GitHub</span>
+                            </div>
+                        </div>
+
+                        <!-- Centered at bottom -->
+                        <div class="d-flex justify-content-center mt-4">
+                            <a class="btn btn-outline-primary" href="https://github.com/JMata28/portfolio_website" target="_blank" rel="noopener noreferrer" role="button">GitHub Repo</a>
+                        </div>
                         </div>
                     </div>
+                    </div>
+                </div>
+
                 </div>
             </div>
-        </div>
+            </div>
         <!-- Second Project Card -->
-        <div id="second-project" class="container my-5 d-flex justify-content-center">
+            <div id="second-project" class="container my-5 d-flex justify-content-center">
             <div class="card w-100 mb-2">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ url_for('static', filename='/media/pictures/DishData.png') }}" class="img-fluid rounded-start" alt="Dish Data">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">DishData: A Cookbook with a Pinch of AI</h5>
-                            <p class="card-text">
-                                Description of technologies used:
-                                Python
-                                Flask
-                                Google Gemini AI API
-                            </p>
-                            <a class="btn btn-outline-primary me-3" href="#" role="button">Video Demo</a>
-                            <a class="btn btn-outline-primary" href="#" role="button">GitHub Repo</a>
+                <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
+                
+                <!-- Left side: Image -->
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='/media/pictures/DishData.png') }}" class="img-fluid rounded-start h-100 object-fit-cover" alt="HTML Picture">
+                </div>
+
+                <!-- Right side: Content -->
+                <div class="col-md-8">
+                    <div class="card-body h-100 d-flex flex-column"> <!-- make content fill height -->
+                    <div class="row flex-grow-1 align-items-stretch">
+                        
+                        <!-- Left: Description -->
+                        <div class="col-md-7 border-end">
+                        <h4 class="card-title fw-bold mb-3">DishData: A Cookbook with a Pinch of AI</h4>
+                        <p class="card-text text-start">
+                            DishData is a social recipe-sharing platform where users can create, share, save, and rate dishes in a clean and organized interface. It also features generative AI that helps users craft new recipes inspired by existing ones, which can be customized and shared with the community. Features include:
+                        </p>
+                        <ul class="text-start">
+                            <li>User signup and login with encrypted password-based authentication.</li>
+                            <li>Recipe creation with standardized format to enforce consistency and organization.</li>
+                            <li>1-5 star rating feature.</li>
+                            <li>Recipe name-based search.</li>
+                            <li>Feature to save recipes to "Favorites".</li>
+                            <li>Automatic AI generartion of recipes based on other recipes.</li>
+                        </ul>
                         </div>
+
+                        <!-- Right: Technologies -->
+                        <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <h6 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Python</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Flask</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">SQLite DB</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Google Gemini AI</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">REST API</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">HTML5</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">CSS</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Bootstrap</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">GitHub</span>
+                            </div>
+                        </div>
+
+                        <!-- Centered at bottom -->
+                        <div class="d-flex justify-content-center mt-4">
+                            <a class="btn btn-outline-primary me-3" data-bs-toggle="modal" data-bs-target="#constructionModal"  role="button">Video Demo</a>
+                            <a class="btn btn-outline-primary me-3" href="https://github.com/JMata28/recipe_app" target="_blank" rel="noopener noreferrer" role="button">GitHub Repo</a>
+                        </div>
+                        </div>
+
+                    </div>
                     </div>
                 </div>
+
+                </div>
             </div>
-        </div>
+            </div>
         <!-- Third Project Card -->
-        <div id="third-project" class="container my-5 d-flex justify-content-center">
+            <div id="third-project" class="container my-5 d-flex justify-content-center">
             <div class="card w-100 mb-2">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ url_for('static', filename='/media/pictures/face_recognition.jpg') }}" class="img-fluid rounded-start" alt="Face Recognition">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Golang Face Recognition Program</h5>
-                            <p class="card-text">
-                                Description of technologies used:
-                                Golang
-                                GoCV
-                                LuxAndCloud
-                            </p>
-                            <a class="btn btn-outline-primary me-3" href="#" role="button">Video Demo</a>
-                            <a class="btn btn-outline-primary" href="#" role="button">GitHub Repo</a>
+                <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
+                
+                <!-- Left side: Image -->
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='/media/pictures/face_recognition.jpg') }}" class="img-fluid rounded-start h-100 object-fit-cover" alt="HTML Picture">
+                </div>
+
+                <!-- Right side: Content -->
+                <div class="col-md-8">
+                    <div class="card-body h-100 d-flex flex-column"> <!-- make content fill height -->
+                    <div class="row flex-grow-1 align-items-stretch">
+                        
+                        <!-- Left: Description -->
+                        <div class="col-md-7 border-end">
+                        <h4 class="card-title fw-bold mb-3">Golang Face Recognition Program</h4>
+                        <p class="card-text text-start">
+                            A Go program that allows the user to train face recognition models to recognize specific faces based on pictures. 
+                        </p>
+                        <ul class="text-start">
+                            <li>Users can upload multiple pictures of the same faces to make the face recognition models more accurate. </li>
+                            <li>Face recognition models return the likelihood percentage that a face is of a certain person.</li>
+                            <li>Users can upload pictures for face recognition.</li>
+                            <li>Users can use face recognition with their live camera feed.</li>
+                        </ul>
                         </div>
+
+                        <!-- Right: Technologies -->
+                        <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <h6 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Golang</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">GoCV</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">LuxAndCloud</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">SQL DB</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">REST API</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">GitHub</span>
+                            </div>
+                        </div>
+
+                        <!-- Centered at bottom -->
+                        <div class="d-flex justify-content-center mt-4">
+                            <a class="btn btn-outline-primary me-3" data-bs-toggle="modal" data-bs-target="#constructionModal" role="button">Video Demo</a>
+                            <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#constructionModal"  role="button">GitHub Repo</a>
+                        </div>
+                        </div>
+
+                    </div>
                     </div>
                 </div>
+
+                </div>
             </div>
-        </div>
+            </div>
         <!-- Fourth Project Card -->
-        <div id="fourth-project" class="container my-5 d-flex justify-content-center">
+            <div id="fourth-project" class="container my-5 d-flex justify-content-center">
             <div class="card w-100 mb-2">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ url_for('static', filename='/media/pictures/pgs1.png') }}" class="img-fluid rounded-start" alt="PGS1">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Plant Growth Station - Product and Web App</h5>
-                            <p class="card-text">
-                                Description of technologies used:
-                                Python
-                                Flask
-                                Bootstrap
-                            </p>
-                            <a class="btn btn-outline-primary me-3" data-bs-toggle="modal" data-bs-target="#PGSDemoModal" href="#" role="button">Video Demo</a>
-                            <a class="btn btn-outline-primary" href="#" role="button">GitHub Repo</a>
+                <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
+                
+                <!-- Left side: Image -->
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='/media/pictures/pgs1.png') }}" class="img-fluid rounded-start h-100 object-fit-cover" alt="HTML Picture">
+                </div>
+
+                <!-- Right side: Content -->
+                <div class="col-md-8">
+                    <div class="card-body h-100 d-flex flex-column"> <!-- make content fill height -->
+                    <div class="row flex-grow-1 align-items-stretch">
+                        
+                        <!-- Left: Description -->
+                        <div class="col-md-7 border-end">
+                        <h4 class="card-title fw-bold mb-3">Plant Growth Station <br> Product and Web App</h4>
+                        <p class="card-text text-start">
+                            The Plant Growth Station (PGS) is a hardware product along with a web application that aims to aid customers who grow plants in their homes.
+                        </p>
+                        <ul class="text-start">
+                            <li>PGS constantly monitors the levels of light, temperature, and air humidity that a plant experiences throughout the day. The user can view these values in graphs online close to real-time. </li>
+                            <li>The web app allows the user to create an account with their email and receive daily reports with the average values for light, temperature, and humidity around their plant.</li>
+                            <li>Automated email alerts are sent when the sensor values exceed or go below a threshold determined by the user.</li>
+                            <li>The app also functions as a social media app to share posts about the progres of your plants!</li>
+                        </ul>
                         </div>
+
+                        <!-- Right: Technologies -->
+                        <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <h6 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Python</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Flask</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">SQLite DB</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">InfluxDB</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">REST API</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">HTML</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Bootstrap</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">GitHub</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Grafana</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Raspberry Pi</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-center gap-2 mt-3">
+                        <a class="btn btn-outline-primary w-75" data-bs-toggle="modal" data-bs-target="#PGSWebAppDEMOModal" role="button">
+                            Web App DEMO
+                        </a>
+                        <a class="btn btn-outline-primary w-75" data-bs-toggle="modal" data-bs-target="#PGSHardwareDEMOModal" role="button">
+                            Hardware DEMO
+                        </a>
+                        <a class="btn btn-outline-primary w-75" data-bs-toggle="modal" data-bs-target="#PGSEmailDEMOModal" role="button">
+                            Email Alerts DEMO
+                        </a>
+                        </div>
+                        <!-- Centered at bottom -->
+                         <div class="d-flex justify-content-center mt-4">
+                            <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#constructionModal" role="button">GitHub Repo</a>
+                        </div>
+                        </div>
+
+                    </div>
                     </div>
                 </div>
+
+                </div>
             </div>
-        </div>
+            </div>
     </div>
     <!-- Contact section -->
     <div class="container">

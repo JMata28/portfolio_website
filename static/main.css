@@ -31,7 +31,7 @@ html{
   font-style: normal;
 }
 
-#highlighted-text{
+.highlighted-text{
     font-weight: 500;
     color: var(--dark-red);
 }
@@ -90,6 +90,22 @@ html{
 .btn.space-grotesk-title {
     font-size: 1.5rem;
     font-weight: 500;
+}
+
+/*ABOUT SECTION CLASSES*/
+
+/* Add redish hue to accordion when clicked */
+.accordion-button:focus,
+.accordion-button:focus-visible {
+  box-shadow: 0 0 0 0.15rem rgba(150, 0, 0, 0.25) !important;
+  outline: none !important;
+}
+
+/* Keep consistent color when active */
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
 }
 
 /* TECH STACK SECTION CLASSES */ 
@@ -157,28 +173,31 @@ html{
     color: white;
 }
 
-
 /* BUTTON CLASSES */
 
-/* Override Bootstrap outline primary button styles */
+/* Base button — dark red background, white text */
 .btn-outline-primary {
-  color: var(--dark-red);
-  border-color: var(--dark-red);
-}
-
-.btn-outline-primary:hover,
-.btn-outline-primary:focus {
   color: #fff;
   background-color: var(--dark-red);
   border-color: var(--dark-red);
 }
 
+/* Hover / focus — invert colors */
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  color: var(--dark-red);
+  background-color: #fff;
+  border-color: var(--dark-red);
+}
+
+/* Active — slightly darker red background */
 .btn-outline-primary:active {
   color: #fff;
   background-color: rgb(180, 19, 2); /* slightly darker red for active state */
   border-color: rgb(180, 19, 2);
 }
 
+/* Disabled — faded dark red border and text on transparent background */
 .btn-outline-primary:disabled,
 .btn-outline-primary.disabled {
   color: var(--dark-red);
@@ -187,8 +206,7 @@ html{
   opacity: 0.65;
 }
 
-
-/* */
+/* MODAL CLASSES */
 
 .modal {
     z-index: 1055 !important;
@@ -197,6 +215,16 @@ html{
 .modal-backdrop {
     z-index: 1050 !important;
 }
+
+#carouselPGSVideos {
+  background-color: black;
+}
+
+#carouselPGSVideos .carousel-inner {
+  background-color: black;
+}
+
+/* TECH STACK SECTION CLASSES*/
 
 .tech-stack-item{
     background-color: rgb(255, 255, 255); /* light gray */
@@ -210,5 +238,13 @@ html{
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
 }
 
+/*Button class to remove blueish hue from primary class */
 
-
+.btn-outline-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary:focus-visible {
+  background-color: transparent !important;
+  color: inherit !important;
+  border-color: inherit !important;
+  box-shadow: none !important;
+}
