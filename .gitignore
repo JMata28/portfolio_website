@@ -59,3 +59,6 @@ pip-delete-this-directory.txt
 
 #Videos folder
 static/media/videos/
+
+#Environment variables
+.env
