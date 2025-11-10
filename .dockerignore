@@ -1,0 +1,42 @@
+# Byte-compiled / Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Environment files (don’t include secrets)
+.env
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# IDE files
+.vscode/
+.idea/
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails, system files
+._*
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.fseventsd
+
+#git
+.git
+.gitignore
+
+# Media to exclude from the Docker image
+static/media/videos/PGS_Demo/

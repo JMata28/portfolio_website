@@ -253,7 +253,7 @@ html{
 .top-section {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 2s ease-out, transform 1s ease-out;
 }
 
 /* Active state: fully visible and in place */
