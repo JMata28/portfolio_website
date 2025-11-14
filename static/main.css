@@ -1,5 +1,12 @@
+/* GENERAL AND TITLE CLASSES*/
+
 :root {
   --dark-red: rgb(204, 21, 1); 
+  --darker-red: rgb(180, 19, 2);
+}
+
+.dark-red{
+    color: var(--dark-red)
 }
 
 body, html {
@@ -10,6 +17,33 @@ body, html {
     scroll-behavior: smooth;
 }
 
+html{
+  scroll-padding-top: 20vh; /* centers target section vertically */
+}
+
+.big-title{
+    font-size: 3rem;
+}
+
+.space-grotesk-title {
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.highlighted-text{
+    font-weight: 500;
+    color: var(--dark-red);
+}
+
+
+
+/* BACKGROUND CLASSES*/
+.video-wrapper {
+    position: relative; /* NOT fixed or absolute with z-index */
+    z-index: auto;      /* ensure it does not create a stacking context above the modal */
+}
+
 #bg-video {
     position: fixed;
     top: 0;
@@ -18,8 +52,19 @@ body, html {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1;
-    object-fit: cover; /* Ensures the video covers the entire background */
+    z-index: -1;        /* BELOW everything */
+    object-fit: cover;
+}
+
+#blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    z-index: 0;          /* BELOW modal */
 }
 
 /* Content on top of the video */
@@ -31,30 +76,8 @@ body, html {
     margin-top: 20%;
 }
 
-#blur-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* semi-transparent black */
-    backdrop-filter: blur(8px);       /* blur effect */
-    z-index: 0;                       /* below content but above video */
-}
 
-/* <weight>: Use a value from 300 to 700 */
-/* <uniquifier>: Use a unique and descriptive class name */
-
-.space-grotesk-title {
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
-#highlighted-text{
-    font-weight: 500;
-    color: var(--dark-red);
-}
+/*TOP SECTION CLASSES*/
 
 .top-section {
   display: flex;
@@ -64,17 +87,28 @@ body, html {
   padding-bottom: 0vh;       /* remove extra padding */
 }
 
-.navbar-nav {
-  justify-content: center;
-  width: 100%;
+.btn.space-grotesk-title {
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
-#card-b{
-    background: rgba(0, 0, 0, 0.3); /* semi-transparent black */
-    backdrop-filter: blur(8px);       /* blur effect */
-    z-index: 0;                       /* below content but above video */
+/*ABOUT SECTION CLASSES*/
+
+/* Add redish hue to accordion when clicked */
+.accordion-button:focus,
+.accordion-button:focus-visible {
+  box-shadow: 0 0 0 0.15rem rgba(150, 0, 0, 0.25) !important;
+  outline: none !important;
 }
 
+/* Keep consistent color when active */
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+/* TECH STACK SECTION CLASSES */ 
 .icon-rect {
   width: 100%;                  /* fills the Bootstrap column */
   height: 150px;                /* fixed height for all boxes */
@@ -99,46 +133,138 @@ body, html {
   object-fit: contain;           /* ensures image scales proportionally inside the wrapper */
 }
 
-/* Change navbar link colors */
-.navbar .nav-link {
-  color: rgb(204, 21, 1) !important;
+
+/* NAVBAR CLASSES*/
+
+.navbar-transparent {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px); /* optional: adds nice blur effect behind the navbar */
+}
+/* Navbar buttons: rectangular with slightly rounded corners */
+.nav-pills .nav-link {
+    background-color: var(--darker-red);
+    color: white !important;
+    border-radius: 6px; /* small rounding */
+    margin: 0 5px;      /* spacing between buttons */
+    transition: all 0.3s ease;
 }
 
-/* Change color on hover or focus */
-.navbar .nav-link:hover,
-.navbar .nav-link:focus {
-  color: rgb(255, 80, 60) !important; /* lighter red on hover */
+/* Hover/focus: invert colors */
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link:focus {
+    background-color: white !important;
+    color: var(--darker-red) !important;
+    border-color: var(--darker-red);
 }
 
-/* Change active pill color */
+/* Active state: dark red with white text */
 .nav-pills .nav-link.active {
-  background-color: rgb(204, 21, 1) !important;
-  color: white !important;
+    background-color: var(--darker-red) !important;
+    color: white !important;
 }
 
-/* Override Bootstrap outline primary button styles */
+/* Dropdown items styling */
+.navbar .dropdown-menu .dropdown-item {
+    color: var(--darker-red);
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: var(--darker-red);
+    color: white;
+}
+
+/* BUTTON CLASSES */
+
+/* Base button — dark red background, white text */
 .btn-outline-primary {
-  color: rgb(204, 21, 1);
-  border-color: rgb(204, 21, 1);
+  color: #fff;
+  background-color: var(--dark-red);
+  border-color: var(--dark-red);
 }
 
+/* Hover / focus — invert colors */
 .btn-outline-primary:hover,
 .btn-outline-primary:focus {
-  color: #fff;
-  background-color: rgb(204, 21, 1);
-  border-color: rgb(204, 21, 1);
+  color: var(--dark-red);
+  background-color: #fff;
+  border-color: var(--dark-red);
 }
 
+/* Active — slightly darker red background */
 .btn-outline-primary:active {
   color: #fff;
   background-color: rgb(180, 19, 2); /* slightly darker red for active state */
   border-color: rgb(180, 19, 2);
 }
 
+/* Disabled — faded dark red border and text on transparent background */
 .btn-outline-primary:disabled,
 .btn-outline-primary.disabled {
-  color: rgb(204, 21, 1);
+  color: var(--dark-red);
   background-color: transparent;
-  border-color: rgb(204, 21, 1);
+  border-color: var(--dark-red);
   opacity: 0.65;
 }
+
+/* MODAL CLASSES */
+
+.modal {
+    z-index: 1055 !important;
+}
+
+.modal-backdrop {
+    z-index: 1050 !important;
+}
+
+#carouselPGSVideos {
+  background-color: black;
+}
+
+#carouselPGSVideos .carousel-inner {
+  background-color: black;
+}
+
+/* TECH STACK SECTION CLASSES*/
+
+.tech-stack-item{
+    background-color: rgb(255, 255, 255); /* light gray */
+    color: black; /* ensures text stays default color */
+    font-weight: 600;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-stack-item:hover {
+  border-color: var(--dark-red);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+/*Button class to remove blueish hue from primary class */
+
+.btn-outline-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary:focus-visible {
+  background-color: transparent !important;
+  color: inherit !important;
+  border-color: inherit !important;
+  box-shadow: none !important;
+}
+
+/* Initial state: invisible and slightly shifted down */
+.top-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-out, transform 1s ease-out;
+}
+
+/* Active state: fully visible and in place */
+.top-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    background-color: #000; /* or whatever dark color matches your site */
+    color: #fff; /* optional: sets default text color */
+    margin: 0; /* remove default spacing */
+}
+

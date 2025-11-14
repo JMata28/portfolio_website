@@ -56,3 +56,13 @@ pip-delete-this-directory.txt
 # IDE files (e.g., VS Code, PyCharm)
 .vscode/
 .idea/
+
+#Videos folder
+static/media/videos/PGS_Demo/
+
+#Environment variables
+.env
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
