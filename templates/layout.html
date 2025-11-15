@@ -126,5 +126,15 @@
                 topSection.classList.add('visible');
             });
         </script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const nav = document.getElementById("main-navbar");
+
+            // Only apply padding on small screens
+            if (window.innerWidth < 992) {  
+                document.body.style.paddingTop = nav.offsetHeight + "px";
+            }
+        });
+        </script>
     </body>
 </html>

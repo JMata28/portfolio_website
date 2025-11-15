@@ -15,14 +15,16 @@ body, html {
     overflow: auto;
     font-family: "Space Grotesk", sans-serif;
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%; /* prevents Safari zoom text inflation */
+
 }
 
 html{
   scroll-padding-top: 20vh; /* centers target section vertically */
 }
 
-.big-title{
-    font-size: 3rem;
+.big-title {
+    font-size: clamp(1.4rem, 4vw + 1rem, 3rem);
 }
 
 .space-grotesk-title {
@@ -92,6 +94,21 @@ html{
     font-weight: 500;
 }
 
+/* Responsive button sizing */
+@media (max-width: 768px) {
+    .btn.space-grotesk-title {
+        font-size: 1.1rem;
+        padding: 8px 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn.space-grotesk-title {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+}
+
 /*ABOUT SECTION CLASSES*/
 
 /* Add redish hue to accordion when clicked */
@@ -138,7 +155,7 @@ html{
 
 .navbar-transparent {
     background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px); /* optional: adds nice blur effect behind the navbar */
+    backdrop-filter: blur(5px); /* adds nice blur effect behind the navbar */
 }
 /* Navbar buttons: rectangular with slightly rounded corners */
 .nav-pills .nav-link {
@@ -171,6 +188,17 @@ html{
 .navbar .dropdown-menu .dropdown-item:hover {
     background-color: var(--darker-red);
     color: white;
+}
+
+#main-navbar .nav {
+    display: flex;            /* ensures flexbox layout */
+    flex-wrap: wrap;          /* allows items to wrap to next row */
+    justify-content: center;  /* center horizontally in each row */
+    gap: 0.5rem;              /* spacing between buttons */
+}
+
+#main-navbar .nav-link {
+    text-align: center;       /* centers text inside each button */
 }
 
 /* BUTTON CLASSES */
@@ -263,8 +291,16 @@ html{
 }
 
 body {
-    background-color: #000; /* or whatever dark color matches your site */
-    color: #fff; /* optional: sets default text color */
+    background-color: #000; 
+    color: #fff; /* sets default text color */
     margin: 0; /* remove default spacing */
 }
 
+/*IMAGE CLASSES */
+.card-img-fixed {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* fills container and crops */
+    object-position: center; /* center-crop */
+    display: block;          /* fixes Safari whitespace bug */
+}
