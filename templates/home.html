@@ -165,160 +165,23 @@
     </div>
 
     <!-- Icon grid -->
-     <h1 id="techStack" class="big-title"> Tech Stack Summary</h1>
+    <h1 id="techStack" class="big-title"> Tech Stack Summary</h1>
     <div class="container mt-4 mb-4">
-        <!-- First Row -->
+        <!-- Individual Skill -->
         <div class="row text-center">
-            <!-- Python -->
+            {% for skill in skills%}
             <div class="col-6 col-md-3 mb-3">
-                <a href="https://www.python.org/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
+                <a href="{{ skill.href }}" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
                 <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
                     <div class="icon-img-wrapper">
-                    <img src="{{ url_for('static', filename='/media/pictures/Python-logo.png') }}" 
-                        alt="Flask Logo">
+                    <img src="{{ url_for('static', filename='/media/pictures/' + skill.filename) }}" 
+                        alt="{{ skill.alt }}">
                     </div>
-                    <div class="mt-2">Python</div>
+                    <div class="mt-2">{{ skill.label }}</div>
                 </div>
                 </a>
             </div>
-            <!-- Flask -->
-            <div class="col-6 col-md-3 mb-3">
-                <a href="https://flask.palletsprojects.com/en/stable/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
-                    <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
-                        <div class="icon-img-wrapper">
-                        <img src="{{ url_for('static', filename='/media/pictures/Flask_logo.png') }}" 
-                            alt="Flask Logo">
-                        </div>
-                        <div class="mt-2">Flask</div>
-                    </div>
-                </a>
-            </div>
-            <!-- SQL -->
-            <div class="col-6 col-md-3 mb-3">
-                <a href="https://sqlite.org/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
-                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
-                    <div class="icon-img-wrapper">
-                    <img src="{{ url_for('static', filename='/media/pictures/Sql_data_base_with_logo.png') }}" 
-                        alt="SQL Logo">
-                    </div>
-                    <div class="mt-2">SQL</div>
-                </div>
-                </a>
-            </div>
-            <!-- JavaScript -->
-            <div class="col-6 col-md-3 mb-3">
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
-                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
-                    <div class="icon-img-wrapper">
-                    <img src="{{ url_for('static', filename='/media/pictures/JavaScript-logo.png') }}" 
-                        alt="JavaScript Logo">
-                    </div>
-                    <div class="mt-2">JavaScript</div>
-                </div>
-                </a>
-            </div>
-        </div>
-        <!-- Second Row -->
-        <div class="row text-center">
-            <!-- AWS++ -->
-            <div class="col-6 col-md-3 mb-3">
-                <a href="https://docs.aws.amazon.com/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
-                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
-                    <div class="icon-img-wrapper">
-                    <img src="{{ url_for('static', filename='/media/pictures/AWS logo.png') }}" 
-                        alt="AWS Logo">
-                    </div>
-                    <div class="mt-2">AWS App Deployment</div>
-                </div>
-                </a>
-            </div>
-            <!-- Docker -->
-            <div class="col-6 col-md-3 mb-3">
-                <a href="https://docs.docker.com/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
-                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
-                    <div class="icon-img-wrapper">
-                    <img src="{{ url_for('static', filename='/media/pictures/docker logo.png') }}" 
-                        alt="Docker Logo">
-                    </div>
-                    <div class="mt-2">Docker</div>
-                </div>
-                </a>
-            </div>
-            <!-- HTML 5-->
-            <div class="col-6 col-md-3 mb-3">
-                <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
-                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
-                    <div class="icon-img-wrapper">
-                    <img src="{{ url_for('static', filename='/media/pictures/HTML5.png') }}" 
-                        alt="HTML5 Logo">
-                    </div>
-                    <div class="mt-2">HTML5</div>
-                </div>
-                </a>
-            </div>
-            <!-- Bootstrap -->
-            <div class="col-6 col-md-3 mb-3">
-                <a href="https://getbootstrap.com/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
-                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
-                    <div class="icon-img-wrapper">
-                    <img src="{{ url_for('static', filename='/media/pictures/Bootstrap logo.png') }}" 
-                        alt="Bootstrap Logo">
-                    </div>
-                    <div class="mt-2">Bootstrap</div>
-                </div>
-                </a>
-            </div>
-        </div>
-        <!-- Third Row -->
-        <div class="row text-center">
-            <!-- C++ -->
-            <div class="col-6 col-md-3 mb-3">
-                <a href="https://isocpp.org/std/the-standard" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
-                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
-                    <div class="icon-img-wrapper">
-                    <img src="{{ url_for('static', filename='/media/pictures/C++Logo.png') }}" 
-                        alt="C++ Logo">
-                    </div>
-                    <div class="mt-2">C++</div>
-                </div>
-                </a>
-            </div>
-            <!-- Golang -->
-            <div class="col-6 col-md-3 mb-3">
-                <a href="https://go.dev/doc/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
-                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
-                    <div class="icon-img-wrapper">
-                    <img src="{{ url_for('static', filename='/media/pictures/Go_Logo_Blue.png') }}" 
-                        alt="Golang Logo">
-                    </div>
-                    <div class="mt-2">Golang</div>
-                </div>
-                </a>
-            </div>
-            <!-- GitHub -->
-            <div class="col-6 col-md-3 mb-3">
-                <a href="https://docs.github.com/en" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
-                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
-                    <div class="icon-img-wrapper">
-                    <img src="{{ url_for('static', filename='/media/pictures/github.png') }}" 
-                        alt="GitHub Logo">
-                    </div>
-                    <div class="mt-2">GitHub</div>
-                </div>
-                </a>
-            </div>
-            <!-- RestAPI -->
-            <div class="col-6 col-md-3 mb-3">
-                <a href="https://aws.amazon.com/what-is/restful-api/" class="text-decoration-none text-reset" target="_blank" rel="noopener noreferrer">
-                <div class="icon-rect border rounded d-flex flex-column align-items-center justify-content-center tech-stack-item">
-                    <div class="icon-img-wrapper">
-                    <img src="{{ url_for('static', filename='/media/pictures/rest_api_logo.png') }}" 
-                        alt="Rest API Logo">
-                    </div>
-                    <div class="mt-2">REST API</div>
-                </div>
-                </a>
-            </div>
+            {% endfor %}
         </div>
     <!-- End of icon grid container -->
     </div>
