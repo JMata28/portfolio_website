@@ -17,10 +17,11 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Projects</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#first-project">This Portfolio Website</a></li>
-                        <li><a class="dropdown-item" href="#second-project">DishData</a></li>
-                        <li><a class="dropdown-item" href="#third-project">Golang Machine Learning Face Detection Program</a></li>
-                        <li><a class="dropdown-item" href="#fourth-project">Plant Growth Station</a></li>
+                        <li><a class="dropdown-item" href="#first-project">Prayer Circle</a></li>
+                        <li><a class="dropdown-item" href="#second-project">This Portfolio Website</a></li>
+                        <li><a class="dropdown-item" href="#third-project">DishData</a></li>
+                        <li><a class="dropdown-item" href="#fourth-project">Golang Machine Learning Face Detection Program</a></li>
+                        <li><a class="dropdown-item" href="#fifth-project">Plant Growth Station</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -32,16 +33,21 @@
     <!-- Top Section (Hero Section)-->
     <div class="top-section">
         <h1 class="space-grotesk-title big-title">
-            Hello. My name is José Mata and I am a 
-            <div class="highlighted-text">software engineer.</div>
+            Welcome. <br> My name is José Mata and I am a 
+            <div class="highlighted-text">Full-stack Developer and Computer Science Lecturer.</div>
         </h1>
         <div class="text-center">
-        <button type="button" class="btn btn-outline-light btn-lg space-grotesk-title">
+        <button type="button" class="btn btn-outline-light btn-lg space-grotesk-title me-2">
             <a href="#projectsSection" class="text-decoration-none text-reset">View my work </a>
         </button>
         <a href="{{ resume_URL }}" target="_blank" rel="noopener noreferrer">
-            <button type="button" class="btn btn-outline-light btn-lg space-grotesk-title">
+            <button type="button" class="btn btn-outline-light btn-lg space-grotesk-title me-2">
                 Download Resume
+            </button>
+        </a>
+        <a href="{{ CV_URL }}" target="_blank" rel="noopener noreferrer">
+            <button type="button" class="btn btn-outline-light btn-lg space-grotesk-title">
+                Download CV
             </button>
         </a>
         </div>
@@ -54,11 +60,11 @@
                 <h1 id="aboutSection" class="mb-4 big-title">About</h1>
                 <div class="text-start">
                     <p>
-                    Diligent software engineer with hands-on experience in both full-time and internship roles, specializing in Python full-stack development. Boston-based and actively seeking software engineering/software developer opportunities, with openness to relocation for the right role.
+                    Diligent full-stack software developer/engineer and computer science lecturer with hands-on experience in both full-time and internship roles, specializing in Python and JavaScript full-stack development. Boston-based and actively seeking software engineering/software developer and professorship opportunities, with openness to relocation for the right role.
                     </p>
                     <ul>
                         <li>Creator of multiple full-stack Flask applications.</li>
-                        <li>Currently teaching an advanced Python concepts course, reflecting a deep understanding of the language and ability to mentor others. </li>
+                        <li>Currently teaching advanced programming courses, reflecting a deep understanding of multiple programming languages and ability to mentor others. </li>
                         <li>Bilingual, highly motivated, proactive, and a fast self-learner. </li>
                     </ul>
                 </div>
@@ -78,14 +84,14 @@
                     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
                         <div class="accordion-body text-start">
                             <div class="d-flex justify-content-between">
-                                <strong>Professor of Computer Science</strong>
+                                <strong>Computer Science Lecturer</strong>
                                 <strong>September 2025 - Present</strong>
                             </div>
                         <em>Bridgewater State University, Bridgewater MA</em>
                             <ul>
-                                <li>Develop and deliver a Python-focused cybersecurity curriculum with original materials, covering advanced topics like recursion, abstract data types, and secure coding.</li>
-                                <li>Teach two course sections by leading hands-on, project-based sessions teaching software architecture, Git/GitHub, collaborative coding, and CI/CD workflows for multiple student groups.</li>
-                                <li>Mentor students in scalable, maintainable software development through modular design, documentation, and effective data structure selection.</li>
+                                <li>Teach multiple cohorts of 12–20 students advanced, cybersecurity-focused Python and other programming language concepts, including OOP, recursion, abstract data structures, control structures, type systems, and comparative programming paradigms.</li>
+                                <li>Instruct students in developer tooling and workflows, including command-line environments, Git/GitHub source control, regular expressions, and collaborative development practices across multiple languages.</li>
+                                <li>Design and deliver original, project-based coursework featuring live coding and hands-on programming language analysis (syntax and semantics), while exploring language design trade-offs, object-oriented implementations (e.g., Java vs. C++), and ethical considerations in programming language design.</li>
                             </ul>
                         </div>
                     </div>
@@ -196,6 +202,79 @@
                 <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
                 
                 <!-- Left side: Image -->
+                <div class="col-md-4 d-flex card-img-bg">
+                    <img src="{{ url_for('static', filename='/media/pictures/prayer-circle-logo.png') }}"
+                        class="card-img-fixed card-img-contain rounded-start"
+                        alt="HTML Picture">
+                </div>
+
+                <!-- Right side: Content -->
+                <div class="col-md-8">
+                    <div class="card-body h-100 d-flex flex-column"> <!-- make content fill height -->
+                    <div class="row flex-grow-1 align-items-stretch">
+                        
+                        <!-- Left: Description -->
+                        <div class="col-md-7 border-end">
+                        <h4 class="card-title fw-bold mb-3">Prayer Circle</h4>
+                        <h5 class="card-title fw-bold mb-3">In Progress</h5>
+                        <p class="card-text text-start">
+                            Prayer Circle is a simple, anonymous prayer-request platform designed to encourage participation, 
+                            compassion, and community without debate or pressure. The application allows users to share prayer 
+                            requests, support others through prayer with a single tap, and celebrate answered prayers, all 
+                            without requiring public comments or personal exposure.
+                        </p>
+                        <ul class="text-start">
+                            <li>Designed and built from scratch as a Native iOS app built with Swift using MVVM architecture.</li>
+                            <li>RESTful API backend built with Node.js and Express.js.</li>
+                            <li>PostgreSQL database.</li>
+                        </ul>
+                        <p class="card-text text-start">
+                            MVP Features include:
+                        </p>
+                         <ul class="text-start">
+                            <li>Post prayer requests with an option to remain anonymous.</li>
+                            <li>Pray button that allows users to support a request without commenting.</li>
+                            <li>Prayer count to display how many people have prayed for each request.</li>
+                            <li>Answered prayer updates with optional follow-up messages.</li>
+                        </ul>
+                        </div>
+
+                        <!-- Right: Technologies -->
+                        <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-secondary fs-6 py-2 px-3">JavaScript</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Node.js</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">SwiftUI</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Express.js</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">PostgreSQL</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">REST API</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Postman</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">GitHub</span>
+                            </div>
+                        </div>
+
+                        <!-- Centered at bottom -->
+                        <div class="d-flex justify-content-center mt-4">
+                            <a class="btn btn-outline-primary me-3" data-bs-toggle="modal" data-bs-target="#constructionModal"  role="button">Video Demo</a>
+                            <a class="btn btn-outline-primary" href="https://github.com/JMata28/Prayer-Circle" target="_blank" rel="noopener noreferrer" role="button">GitHub Repo</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            </div>
+        <!-- Second Project Card -->
+            <!-- Outer container -->
+            <div id="second-project" class="container my-5 d-flex justify-content-center">
+            <div class="card w-100 mb-2">
+                <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
+                
+                <!-- Left side: Image -->
                 <div class="col-md-4 d-flex">
                     <img src="{{ url_for('static', filename='/media/pictures/html_pic.jpg') }}"
                         class="card-img-fixed rounded-start"
@@ -210,13 +289,14 @@
                         <!-- Left: Description -->
                         <div class="col-md-7 border-end">
                         <h4 class="card-title fw-bold mb-3">This Portfolio Website</h4>
+                        <h5 class="card-title fw-bold mb-3">Published</h5>
                         <p class="card-text text-start">
                             You're looking at it! Josemata.dev is a responsive personal portfolio website showcasing my projects, resume, and contact info.
                             Built to be simple, fast, and easily expandable.
                         </p>
                         <ul class="text-start">
-                            <li>Developed with Python Flask.</li>
-                            <li>Customized with CSS and Bootstrap.</li>
+                            <li>Backend built with Python Flask.</li>
+                            <li>UI designed using HTML5, CSS, and Bootstrap.</li>
                             <li>Containerized in Docker and deployed in Amazon Web Services Beanstalk.</li>
                             <li>Updated periodically to be made more efficient and scalable, as I create more DEMO videos and work on new projects.</li>
                         </ul>
@@ -225,13 +305,13 @@
                         <!-- Right: Technologies -->
                         <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
                         <div>
-                            <h6 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h6>
+                            <h5 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h5>
                             <div class="d-flex flex-wrap gap-2">
                             <span class="badge bg-secondary fs-6 py-2 px-3">Python</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">Flask</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">AWS</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">Docker</span>
-                            <span class="badge bg-secondary fs-6 py-2 px-3">Gunicorn WSGI Server</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">GUnicorn WSGI Server</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">HTML5</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">CSS</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">Bootstrap</span>
@@ -251,8 +331,8 @@
                 </div>
             </div>
             </div>
-        <!-- Second Project Card -->
-            <div id="second-project" class="container my-5 d-flex justify-content-center">
+        <!-- Third Project Card -->
+            <div id="third-project" class="container my-5 d-flex justify-content-center">
             <div class="card w-100 mb-2">
                 <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
                 
@@ -260,7 +340,7 @@
                 <div class="col-md-4 d-flex">
                     <img src="{{ url_for('static', filename='/media/pictures/DishData.png') }}"
                         class="card-img-fixed rounded-start"
-                        alt="HTML Picture">
+                        alt="Dish Data Logo Picture">
                 </div>
 
                 <!-- Right side: Content -->
@@ -271,6 +351,7 @@
                         <!-- Left: Description -->
                         <div class="col-md-7 border-end">
                         <h4 class="card-title fw-bold mb-3">DishData: A Cookbook with a Pinch of AI</h4>
+                        <h5 class="card-title fw-bold mb-3">Completed</h5>
                         <p class="card-text text-start">
                             DishData is a social recipe-sharing platform where users can create, share, save, and rate dishes in a clean and organized interface. It also features generative AI that helps users craft new recipes inspired by existing ones, which can be customized and shared with the community. Features include:
                         </p>
@@ -280,14 +361,14 @@
                             <li>1-5 star rating feature.</li>
                             <li>Recipe name-based search.</li>
                             <li>Feature to save recipes to "Favorites".</li>
-                            <li>Automatic AI generartion of recipes based on other recipes.</li>
+                            <li>Automatic AI generation of recipes based on other recipes.</li>
                         </ul>
                         </div>
 
                         <!-- Right: Technologies -->
                         <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
                         <div>
-                            <h6 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h6>
+                            <h5 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h5>
                             <div class="d-flex flex-wrap gap-2">
                             <span class="badge bg-secondary fs-6 py-2 px-3">Python</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">Flask</span>
@@ -315,8 +396,8 @@
                 </div>
             </div>
             </div>
-        <!-- Third Project Card -->
-            <div id="third-project" class="container my-5 d-flex justify-content-center">
+        <!-- Fourth Project Card -->
+            <div id="fourth-project" class="container my-5 d-flex justify-content-center">
             <div class="card w-100 mb-2">
                 <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
                 
@@ -324,7 +405,7 @@
                 <div class="col-md-4 d-flex">
                     <img src="{{ url_for('static', filename='/media/pictures/face_recognition.jpg') }}"
                         class="card-img-fixed rounded-start"
-                        alt="HTML Picture">
+                        alt="Face Recognition Picture">
                 </div>
 
                 <!-- Right side: Content -->
@@ -335,6 +416,7 @@
                         <!-- Left: Description -->
                         <div class="col-md-7 border-end">
                         <h4 class="card-title fw-bold mb-3">Golang Face Recognition Program</h4>
+                        <h5 class="card-title fw-bold mb-3">Completed</h5>
                         <p class="card-text text-start">
                             A Go program that allows the user to train face recognition models to recognize specific faces based on pictures. 
                         </p>
@@ -349,7 +431,7 @@
                         <!-- Right: Technologies -->
                         <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
                         <div>
-                            <h6 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h6>
+                            <h5 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h5>
                             <div class="d-flex flex-wrap gap-2">
                             <span class="badge bg-secondary fs-6 py-2 px-3">Golang</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">GoCV</span>
@@ -374,8 +456,8 @@
                 </div>
             </div>
             </div>
-        <!-- Fourth Project Card -->
-            <div id="fourth-project" class="container my-5 d-flex justify-content-center">
+        <!-- Fifth Project Card -->
+            <div id="fifth-project" class="container my-5 d-flex justify-content-center">
             <div class="card w-100 mb-2">
                 <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
                 
@@ -394,21 +476,22 @@
                         <!-- Left: Description -->
                         <div class="col-md-7 border-end">
                         <h4 class="card-title fw-bold mb-3">Plant Growth Station <br> Product and Web App</h4>
+                        <h5 class="card-title fw-bold mb-3">Completed</h5>
                         <p class="card-text text-start">
                             The Plant Growth Station (PGS) is a hardware product along with a web application that aims to aid customers who grow plants in their homes.
                         </p>
                         <ul class="text-start">
                             <li>PGS constantly monitors the levels of light, temperature, and air humidity that a plant experiences throughout the day. The user can view these values in graphs online close to real-time. </li>
                             <li>The web app allows the user to create an account with their email and receive daily reports with the average values for light, temperature, and humidity around their plant.</li>
-                            <li>Automated email alerts are sent when the sensor values exceed or go below a threshold determined by the user.</li>
-                            <li>The app also functions as a social media app to share posts about the progres of your plants!</li>
+                            <li>Automated email alerts are sent when the sensor values exceed or fall below a threshold determined by the user.</li>
+                            <li>The app also functions as a social media app to share posts about the progress of your plants!</li>
                         </ul>
                         </div>
 
                         <!-- Right: Technologies -->
                         <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
                         <div>
-                            <h6 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h6>
+                            <h5 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h5>
                             <div class="d-flex flex-wrap gap-2">
                             <span class="badge bg-secondary fs-6 py-2 px-3">Python</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">Flask</span>

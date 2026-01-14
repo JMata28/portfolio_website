@@ -304,3 +304,11 @@ body {
     object-position: center; /* center-crop */
     display: block;          /* fixes Safari whitespace bug */
 }
+
+.card-img-contain {
+    object-fit: contain;
+}
+
+.card-img-bg {
+    background-color: #eceade; /* light gray background */
+}
