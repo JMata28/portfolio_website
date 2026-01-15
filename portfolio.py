@@ -16,6 +16,7 @@ def home_page():
     PGS_Web_App_DEMO_Video_URL = f"{S3_BASE_URL}/media/videos/PGS+Web+App+DEMO.mp4"
     PGS_Hardware_DEMO_Video_URL = f"{S3_BASE_URL}/media/videos/PGS+Device+DEMO.mp4"
     PGS_Email_Alerts_DEMO_Video_URL = f"{S3_BASE_URL}/media/videos/PGS+Email+Alert+DEMO.mp4"
+    Dish_Data_DEMO_Video_URL = f"{S3_BASE_URL}/media/videos/DishData DEMO.mp4"
     skills=[{"href": "https://www.python.org/", "filename": "Python-logo.png", "alt":"Python Logo", "label":"Python"},
             {"href": "https://flask.palletsprojects.com/en/stable/", "filename": "Flask_logo.png", "alt":"Flask Logo", "label":"Flask"},
             {"href": "https://sqlite.org/", "filename": "Sql_data_base_with_logo.png", "alt":"SQL Logo", "label":"SQL"},
@@ -39,6 +40,7 @@ def home_page():
                            PGS_Web_App_DEMO_Video_URL=PGS_Web_App_DEMO_Video_URL,
                            PGS_Hardware_DEMO_Video_URL=PGS_Hardware_DEMO_Video_URL,
                            PGS_Email_Alerts_DEMO_Video_URL=PGS_Email_Alerts_DEMO_Video_URL, 
+                           Dish_Data_DEMO_Video_URL = Dish_Data_DEMO_Video_URL,
                            skills = skills)
 
 if __name__ == "__main__":
