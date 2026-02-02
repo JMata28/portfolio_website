@@ -17,11 +17,12 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Projects</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#first-project">Prayer Circle</a></li>
-                        <li><a class="dropdown-item" href="#second-project">This Portfolio Website</a></li>
-                        <li><a class="dropdown-item" href="#third-project">DishData</a></li>
-                        <li><a class="dropdown-item" href="#fourth-project">Golang Machine Learning Face Detection Program</a></li>
+                        <li><a class="dropdown-item" href="#first-project">EIA Energy Tracker</a></li>
+                        <li><a class="dropdown-item" href="#second-project">Prayer Circle</a></li>
+                        <li><a class="dropdown-item" href="#third-project">This Portfolio Website</a></li>
+                        <li><a class="dropdown-item" href="#fourth-project">DishData</a></li>
                         <li><a class="dropdown-item" href="#fifth-project">Plant Growth Station</a></li>
+                        <li><a class="dropdown-item" href="#sixth-project">Golang Machine Learning Face Detection Program</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -202,6 +203,77 @@
                 <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
                 
                 <!-- Left side: Image -->
+                <div class="col-md-4 d-flex">
+                    <img src="{{ url_for('static', filename='/media/pictures/graphics_picture.png') }}"
+                        class="card-img-fixed rounded-start"
+                        alt="HTML Picture">
+                </div>
+                <!-- Right side: Content -->
+                <div class="col-md-8">
+                    <div class="card-body h-100 d-flex flex-column"> <!-- make content fill height -->
+                    <div class="row flex-grow-1 align-items-stretch">
+                        
+                        <!-- Left: Description -->
+                        <div class="col-md-7 border-end">
+                        <h4 class="card-title fw-bold mb-3">EIA Energy Tracker</h4>
+                        <h5 class="card-title fw-bold mb-3">In Progress</h5>
+                        <p class="card-text text-start">
+                            A serverless energy data pipeline that collects, processes, and stores official hourly electricity demand data from the U.S. Energy Information Administration (EIA) for the Northeast U.S., enabling analysis and visualization.
+                        </p>
+                        <ul class="text-start">
+                            <li>Collects hourly electricity data from the EIA API for ISO New England.</li>
+                            <li>Stores raw data in Azure Blob Storage (Bronze layer) for archival.</li>
+                            <li>Processes and structures data in Python (Silver layer) for analysis.</li>
+                            <li>Loads clean, structured data into Azure SQL Database (Silver layer) for querying.</li>
+                            <li>Aggregates and transforms data in the Gold layer for reporting and business insights.</li>
+                            <li>Visualizes data in Power BI for interactive dashboards and reports.</li>
+                        </ul>
+                        <p class="card-text text-start">
+                            Click on the sample button in this card to see a real sample Power Bi dashboard PDF generated from the data pipeline.
+                        </p>
+                        </div>
+
+                        <!-- Right: Technologies -->
+                        <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Python</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Azure Functions</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Azure SQL Server and Database</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Power BI</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">REST API</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Postman</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">GitHub</span>
+                            </div>
+                        </div>
+                        <!-- Combined buttons container -->
+                        <div class="d-flex flex-column align-items-center gap-2 mt-3">
+                        <!-- PDF button on top -->
+                        <a class="btn btn-outline-primary" href="{{ Energy_Tracker_PDF_URL }}" target="_blank" rel="noopener noreferrer" role="button">
+                            Power BI Dashboard Sample PDF
+                        </a>
+                        <!-- Video and GitHub buttons below PDF -->
+                        <div class="d-flex gap-2 mt-2">
+                            <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#constructionModal" role="button">Video Demo</a>
+                            <a class="btn btn-outline-primary" href="https://github.com/JMata28/Energy-Tracker" target="_blank" rel="noopener noreferrer" role="button">GitHub Repo</a>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            </div>
+        <!-- Second Project Card -->
+            <!-- Outer container -->
+            <div id="second-project" class="container my-5 d-flex justify-content-center">
+            <div class="card w-100 mb-2">
+                <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
+                
+                <!-- Left side: Image -->
                 <div class="col-md-4 d-flex card-img-bg">
                     <img src="{{ url_for('static', filename='/media/pictures/prayer-circle-logo.png') }}"
                         class="card-img-fixed card-img-contain rounded-start"
@@ -268,9 +340,9 @@
                 </div>
             </div>
             </div>
-        <!-- Second Project Card -->
+        <!-- Third Project Card -->
             <!-- Outer container -->
-            <div id="second-project" class="container my-5 d-flex justify-content-center">
+            <div id="third-project" class="container my-5 d-flex justify-content-center">
             <div class="card w-100 mb-2">
                 <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
                 
@@ -331,8 +403,8 @@
                 </div>
             </div>
             </div>
-        <!-- Third Project Card -->
-            <div id="third-project" class="container my-5 d-flex justify-content-center">
+        <!-- Fourth Project Card -->
+            <div id="fourth-project" class="container my-5 d-flex justify-content-center">
             <div class="card w-100 mb-2">
                 <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
                 
@@ -386,66 +458,6 @@
                         <div class="d-flex justify-content-center mt-4">
                             <a class="btn btn-outline-primary me-3" data-bs-toggle="modal" data-bs-target="#DishDataDEMOModal"  role="button">Video Demo</a>
                             <a class="btn btn-outline-primary me-3" href="https://github.com/JMata28/recipe_app" target="_blank" rel="noopener noreferrer" role="button">GitHub Repo</a>
-                        </div>
-                        </div>
-
-                    </div>
-                    </div>
-                </div>
-
-                </div>
-            </div>
-            </div>
-        <!-- Fourth Project Card -->
-            <div id="fourth-project" class="container my-5 d-flex justify-content-center">
-            <div class="card w-100 mb-2">
-                <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
-                
-                <!-- Left side: Image -->
-                <div class="col-md-4 d-flex">
-                    <img src="{{ url_for('static', filename='/media/pictures/face_recognition.jpg') }}"
-                        class="card-img-fixed rounded-start"
-                        alt="Face Recognition Picture">
-                </div>
-
-                <!-- Right side: Content -->
-                <div class="col-md-8">
-                    <div class="card-body h-100 d-flex flex-column"> <!-- make content fill height -->
-                    <div class="row flex-grow-1 align-items-stretch">
-                        
-                        <!-- Left: Description -->
-                        <div class="col-md-7 border-end">
-                        <h4 class="card-title fw-bold mb-3">Golang Face Recognition Program</h4>
-                        <h5 class="card-title fw-bold mb-3">Completed</h5>
-                        <p class="card-text text-start">
-                            A Go program that allows the user to train face recognition models to recognize specific faces based on pictures. 
-                        </p>
-                        <ul class="text-start">
-                            <li>Users can upload multiple pictures of the same faces to make the face recognition models more accurate. </li>
-                            <li>Face recognition models return the likelihood percentage that a face is of a certain person.</li>
-                            <li>Users can upload pictures for face recognition.</li>
-                            <li>Users can use face recognition with their live camera feed.</li>
-                        </ul>
-                        </div>
-
-                        <!-- Right: Technologies -->
-                        <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
-                        <div>
-                            <h5 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h5>
-                            <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-secondary fs-6 py-2 px-3">Golang</span>
-                            <span class="badge bg-secondary fs-6 py-2 px-3">GoCV</span>
-                            <span class="badge bg-secondary fs-6 py-2 px-3">LuxAndCloud</span>
-                            <span class="badge bg-secondary fs-6 py-2 px-3">SQL DB</span>
-                            <span class="badge bg-secondary fs-6 py-2 px-3">REST API</span>
-                            <span class="badge bg-secondary fs-6 py-2 px-3">GitHub</span>
-                            </div>
-                        </div>
-
-                        <!-- Centered at bottom -->
-                        <div class="d-flex justify-content-center mt-4">
-                            <a class="btn btn-outline-primary me-3" data-bs-toggle="modal" data-bs-target="#constructionModal" role="button">Video Demo</a>
-                            <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#constructionModal"  role="button">GitHub Repo</a>
                         </div>
                         </div>
 
@@ -529,6 +541,67 @@
                 </div>
             </div>
             </div>
+        <!-- Sixth Project Card -->
+            <div id="sixth-project" class="container my-5 d-flex justify-content-center">
+            <div class="card w-100 mb-2">
+                <div class="row g-0 align-items-stretch"> <!-- stretch both sides to equal height -->
+                
+                <!-- Left side: Image -->
+                <div class="col-md-4 d-flex">
+                    <img src="{{ url_for('static', filename='/media/pictures/face_recognition.jpg') }}"
+                        class="card-img-fixed rounded-start"
+                        alt="Face Recognition Picture">
+                </div>
+
+                <!-- Right side: Content -->
+                <div class="col-md-8">
+                    <div class="card-body h-100 d-flex flex-column"> <!-- make content fill height -->
+                    <div class="row flex-grow-1 align-items-stretch">
+                        
+                        <!-- Left: Description -->
+                        <div class="col-md-7 border-end">
+                        <h4 class="card-title fw-bold mb-3">Golang Face Recognition Program</h4>
+                        <h5 class="card-title fw-bold mb-3">Completed</h5>
+                        <p class="card-text text-start">
+                            A Go program that allows the user to train face recognition models to recognize specific faces based on pictures. 
+                        </p>
+                        <ul class="text-start">
+                            <li>Users can upload multiple pictures of the same faces to make the face recognition models more accurate. </li>
+                            <li>Face recognition models return the likelihood percentage that a face is of a certain person.</li>
+                            <li>Users can upload pictures for face recognition.</li>
+                            <li>Users can use face recognition with their live camera feed.</li>
+                        </ul>
+                        </div>
+
+                        <!-- Right: Technologies -->
+                        <div class="col-md-5 ps-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="fw-semibold pb-1 mb-2">Tech Stack Implemented</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Golang</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">GoCV</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">LuxAndCloud</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">SQL DB</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">REST API</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">GitHub</span>
+                            </div>
+                        </div>
+
+                        <!-- Centered at bottom -->
+                        <div class="d-flex justify-content-center mt-4">
+                            <a class="btn btn-outline-primary me-3" data-bs-toggle="modal" data-bs-target="#constructionModal" role="button">Video Demo</a>
+                            <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#constructionModal"  role="button">GitHub Repo</a>
+                        </div>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            </div>
+
     </div>
     <!-- Contact section -->
     <div class="container">
