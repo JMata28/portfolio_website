@@ -216,17 +216,16 @@
                         <!-- Left: Description -->
                         <div class="col-md-7 border-end">
                         <h4 class="card-title fw-bold mb-3">EIA Energy Tracker</h4>
-                        <h5 class="card-title fw-bold mb-3">In Progress</h5>
+                        <h5 class="card-title fw-bold mb-3">Completed</h5>
                         <p class="card-text text-start">
-                            A serverless energy data pipeline that collects, processes, and stores official hourly electricity demand data from the U.S. Energy Information Administration (EIA) for the Northeast U.S., enabling analysis and visualization.
+                            A serverless energy data Azure pipeline that collects, processes, and stores official hourly electricity demand data from the U.S. Energy Information Administration (EIA) for the Northeast U.S., enabling analysis and visualization in Power BI.
                         </p>
                         <ul class="text-start">
                             <li>Collects hourly electricity data from the EIA API for ISO New England.</li>
-                            <li>Stores raw data in Azure Blob Storage (Bronze layer) for archival.</li>
-                            <li>Processes and structures data in Python (Silver layer) for analysis.</li>
-                            <li>Loads clean, structured data into Azure SQL Database (Silver layer) for querying.</li>
+                            <li>Stores raw data in Azure Blob Storage Bronze layer for archival.</li>
+                            <li>Processes and structures raw data in Python, then loads the cleaned, structured results into an Azure SQL Database Silver layer for querying and analysis.</li>
                             <li>Aggregates and transforms data in the Gold layer for reporting and business insights.</li>
-                            <li>Visualizes data in Power BI for interactive dashboards and reports.</li>
+                            <li>Visualizes Silver and Gold layer data in Power BI for interactive dashboards and reports.</li>
                         </ul>
                         <p class="card-text text-start">
                             Click on the sample button in this card to see a real sample Power Bi dashboard PDF generated from the data pipeline.
@@ -240,7 +239,9 @@
                             <div class="d-flex flex-wrap gap-2">
                             <span class="badge bg-secondary fs-6 py-2 px-3">Python</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">Azure Functions</span>
-                            <span class="badge bg-secondary fs-6 py-2 px-3">Azure SQL Server and Database</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Azure SQL Server Database</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Azure Blob Storage</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">Azurite</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">Power BI</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">REST API</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">Postman</span>
@@ -255,7 +256,7 @@
                         </a>
                         <!-- Video and GitHub buttons below PDF -->
                         <div class="d-flex gap-2 mt-2">
-                            <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#constructionModal" role="button">Video Demo</a>
+                            <a class="btn btn-outline-primary me-3" data-bs-toggle="modal" data-bs-target="#EIADEMOModal"  role="button">Video Demo</a>
                             <a class="btn btn-outline-primary" href="https://github.com/JMata28/Energy-Tracker" target="_blank" rel="noopener noreferrer" role="button">GitHub Repo</a>
                         </div>
                         </div>
@@ -296,7 +297,7 @@
                             without requiring public comments or personal exposure.
                         </p>
                         <ul class="text-start">
-                            <li>Designed and built from scratch as a Native iOS app built with Swift using MVVM architecture.</li>
+                            <li>Designed and built from scratch as a mobile app built with React.js using MVVM architecture.</li>
                             <li>RESTful API backend built with Node.js and Express.js.</li>
                             <li>PostgreSQL database.</li>
                         </ul>
@@ -318,7 +319,7 @@
                             <div class="d-flex flex-wrap gap-2">
                             <span class="badge bg-secondary fs-6 py-2 px-3">JavaScript</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">Node.js</span>
-                            <span class="badge bg-secondary fs-6 py-2 px-3">SwiftUI</span>
+                            <span class="badge bg-secondary fs-6 py-2 px-3">React.js</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">Express.js</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">PostgreSQL</span>
                             <span class="badge bg-secondary fs-6 py-2 px-3">REST API</span>
